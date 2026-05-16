@@ -1,4 +1,7 @@
-/.env/.venv/
-/.esphome/
+/.env/
+!/.env/activate
+!/.env/init
+
 /secrets.yaml
+
 /local/

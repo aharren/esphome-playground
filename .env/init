@@ -2,11 +2,15 @@
 PYVER=3.13
 PYTHON_ROOT="/Library/Frameworks/Python.framework/Versions/3.13"
 
-VENV_ROOT="${0:a:h}/.venv"
+ENV_ROOT="${0:a:h}"
+VENV_ROOT="${ENV_ROOT}/python-venv"
+
+rm -rf "${VENV_ROOT}"
 mkdir -p "${VENV_ROOT}"
 cd "${VENV_ROOT}"
 
 python3 -m venv esphome
 source "${VENV_ROOT}/esphome/bin/activate"
 
+pip3 install --upgrade pip
 pip3 install esphome==2026.2.4

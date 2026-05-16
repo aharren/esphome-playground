@@ -1,5 +1,8 @@
 # source activate
 
-VENV_ROOT="${0:a:h}/.venv"
+ENV_ROOT="${0:a:h}"
+VENV_ROOT="${ENV_ROOT}/python-venv"
 
 source "${VENV_ROOT}/esphome/bin/activate"
+
+export ESPHOME_DATA_DIR="${ENV_ROOT}/esphome-data"
